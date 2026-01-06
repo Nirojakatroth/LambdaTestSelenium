@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="SeleniumLambdaTestSuite" parallel="true" thread-count="2">
+    <test name="All Selenium Tests">
+        <classes>
+            <class name="tests.SimpleFormDemoTest" />
+            <class name="tests.DragDropSlidersTest" />
+<!--            <class name="tests.InputFormSubmitTest" />-->
+        </classes>
+    </test>
+</suite>
