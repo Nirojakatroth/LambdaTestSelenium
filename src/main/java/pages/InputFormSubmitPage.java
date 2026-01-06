@@ -1,87 +1,3 @@
-/*
-package pages;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
-import java.util.logging.Logger;
-
-public class InputFormSubmitPage {
-    WebDriver driver;
-    private static final Logger logger = Logger.getLogger(InputFormSubmitPage.class.getName());
-
-    By inputFormMenu = By.linkText("Input Form Submit");
-    By nameField = By.cssSelector("input[name='name']");
-    By emailField = By.id("inputEmail4");
-    By passwordField = By.id("inputPassword4");
-    By companyField = By.id("company");
-    By websiteField = By.id("websitename");
-    By countryDropdown = By.cssSelector("select[name='country']");
-    By cityField = By.cssSelector("input[name='city']");
-    By addressField1 = By.id("inputAddress1");
-    By addressField2 = By.id("inputAddress2");
-    By stateField = By.id("inputState");
-    By zipCodeField = By.id("inputZip");
-    By submitButton = By.xpath("//button[text()='Submit']");
-    By successMessage = By.xpath("//p[@class='success-msg hidden']");
-    By errorField = By.cssSelector("input:invalid");
-
-    public InputFormSubmitPage(WebDriver driver) {
-        this.driver = driver;
-    }
-
-    public void navigateToForm() {
-        logger.info("Navigating to Input Form Submit page...");
-        driver.findElement(inputFormMenu).click();
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(submitButton));
-    }
-
-    public void fillForm(String name, String email, String password, String company, String website, String country,
-                         String city, String address1, String address2, String state, String zipCode) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        logger.info("Filling the form with user details...");
-
-        wait.until(ExpectedConditions.visibilityOfElementLocated(nameField)).sendKeys(name);
-        driver.findElement(emailField).sendKeys(email);
-        driver.findElement(passwordField).sendKeys(password);
-        driver.findElement(companyField).sendKeys(company);
-        driver.findElement(websiteField).sendKeys(website);
-
-        WebElement countryElement = driver.findElement(countryDropdown);
-        Select countrySelect = new Select(countryElement);
-        countrySelect.selectByVisibleText(country);
-
-        driver.findElement(cityField).sendKeys(city);
-        driver.findElement(addressField1).sendKeys(address1);
-        driver.findElement(addressField2).sendKeys(address2);
-        driver.findElement(stateField).sendKeys(state);
-        driver.findElement(zipCodeField).sendKeys(zipCode);
-    }
-
-    public void submitForm() {
-        logger.info("Submitting the form...");
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.elementToBeClickable(submitButton)).click();
-    }
-
-    public boolean isErrorMessageDisplayed() {
-        logger.info("Checking for error messages...");
-        return driver.findElements(errorField).size() > 0;
-    }
-
-    public String getSuccessMessage() {
-        logger.info("Fetching the success message...");
-        return driver.findElement(successMessage).getText();
-    }
-}
-*/
-
 package pages;
 
 import org.openqa.selenium.By;
@@ -184,4 +100,5 @@ public class InputFormSubmitPage {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(successMsg)).getText();
     }
 }
+
 
