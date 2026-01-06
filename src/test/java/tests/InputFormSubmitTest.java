@@ -61,7 +61,7 @@ public class InputFormSubmitTest {
 
         Assert.assertTrue(
                 page.isErrorMessageDisplayed(),
-                "❌ Error message NOT displayed for empty form"
+                "Error message NOT displayed for empty form"
         );
 
         // Fill form
@@ -85,7 +85,7 @@ public class InputFormSubmitTest {
         Assert.assertTrue(
                 page.getSuccessMessage()
                         .contains("Thanks for contacting us"),
-                "❌ Success message NOT displayed"
+                "Success message NOT displayed"
         );
     }
 
@@ -96,4 +96,5 @@ public class InputFormSubmitTest {
         }
     }
 }
+
 
